@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nice Bolos</title>
+    <link rel="stylesheet" href="cardapio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Anton+SC&display=swap" rel="stylesheet">
+    <link rel="icon" href="imagens/logo.jpg">
+</head>
+<body>
+    <div id="menu">
+        <div id="esquerda">
+            <img id="gorro" src="imagens/Gorro Chef.png">
+            <h1 id="nice">Nice Bolos</h1>
+        </div>
+        <div id="direita">
+            <input id="home" type="button" value="HOME">
+            <input id="carrinho" type="image" src="imagens/Carrinho.png">
+        </div>
+    </div>
+    <div id="tipo">
+        <input type="button" value="Salgados">
+        <input type="button" value="Bolos">
+        <input type="button" value="Doces">
+    </div>
+    <div id="salgados" class="produtos">
+        <div id="produtoGenerico" class="produto" style="display: none">
+            <img src="">
+            <h1></h1>
+            <h2></h2>
+            <div class="qtdade">
+                <input type="button" value="-">
+                <input type="text">
+                <input type="button" value="+">
+            </div>
+        </div>
+    </div>
+    <div id="doces" class="produtosNone"></div>
+    <div id="bolos" class="produtosNone"></div>
+    <img class="footer" src="imagens/footer.png">
+</body>
+<script src="cardapio.js"></script>
+</html>
