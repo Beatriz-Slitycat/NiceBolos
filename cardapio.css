@@ -1,14 +1,13 @@
-body{
+body {
     display: grid;
     grid-template-rows: min-content min-content 1fr;
     background-color: #ebb1c3;
     margin: 0px;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-#menu{
+#menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,59 +20,131 @@ body{
     color: white;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
 }
-#nice{
+
+#apresentacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #e96992;
+    padding: 50px;
+    gap: 200px;
+}
+
+#txtA {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#explicacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 50px;
+    gap: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    text-align: center;
+    font-size: medium;
+}
+
+#cmpedir{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    font-size: medium;
+    background-color: #fdfdfd;
+}
+
+#cmpdirpassos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    text-align: center;
+    font-size: medium;
+}
+
+#nice {
     color: #D9D9D9;
     text-align: center;
-    font-family: "Alex Brush",cursive;
+    font-family: "Alex Brush", cursive;
     font-size: xx-large;
     margin: 0px;
 }
-#direita,#esquerda{
+
+#direita,
+#esquerda {
     align-items: center;
     display: flex;
 }
-#home{
+
+#home {
     font-size: large;
-    font-family: "Anton SC",sans-serif;
+    font-family: "Anton SC", sans-serif;
     color: white;
     background-color: transparent;
     border: none;
 }
 
-#tipo{
+#tipo {
     display: flex;
     justify-content: center;
-    gap:4vw;
+    gap: 4vw;
     padding: 20px;
     box-sizing: border-box;
     width: 100vw;
 }
 
-#tipo > input{
+#tipo>input {
     width: 250px;
     font-size: x-large;
-    font-family: "Anton SC",sans-serif;
+    font-family: "Anton SC", sans-serif;
     font-weight: 400;
     color: white;
     background-color: #69142f;
     border: none;
     border-radius: 20px;
 }
-.produtosNone{
+
+.produtosNone {
     display: none;
 }
-.produtos{
+
+.produtos {
     display: flex;
     flex-wrap: wrap;
-    gap:50px;
+    gap: 50px;
     height: 100%;
     overflow-y: scroll;
     scrollbar-color: #69142f #1f0a0a;
     box-sizing: border-box;
     padding: 2%;
 }
-.produto{
+
+.produto {
     display: grid;
     grid-template-rows: 203px 3fr 3fr;
     justify-items: center;
@@ -83,31 +154,36 @@ body{
     border-radius: 15%;
     color: white;
 }
-.produto > img{
-    grid-row:1;
+
+.produto>img {
+    grid-row: 1;
     height: 100%;
     width: 340px;
     border-radius: 15%;
 }
-.produto > h1{
+
+.produto>h1 {
     text-align: center;
     text-decoration: underline;
-    color:white;
+    color: white;
     margin: 0;
-    grid-row:2;
+    grid-row: 2;
 }
-.produto > h2{
+
+.produto>h2 {
     color: #69142f;
     margin: 0;
-    grid-row:3;
+    grid-row: 3;
 }
-.footer{
+
+.footer {
     z-index: -1;
     position: absolute;
     bottom: 0;
     width: 100vw;
 }
-.qtdade{
+
+.qtdade {
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -117,21 +193,25 @@ body{
     height: fit-content;
     grid-row: 4;
 }
-.qtdade > input[type="button"]{
+
+.qtdade>input[type="button"] {
     background-color: #69142f;
     border: none;
     border-radius: 100%;
     color: white;
     font-size: large;
 }
-.qtdade > input[type="text"]{
+
+.qtdade>input[type="text"] {
     width: 20px;
     color: white;
     background-color: transparent;
     border: none;
     font-size: large;
 }
-#enviar,#continuar{
+
+#enviar,
+#continuar {
     width: 250px;
     font-size: xx-large;
     color: white;
@@ -139,7 +219,8 @@ body{
     border: none;
     border-radius: 20px;
 }
-#fog{
+
+#fog {
     display: none;
     position: absolute;
     top: 0px;
@@ -147,7 +228,8 @@ body{
     height: 100vh;
     width: 100vw;
 }
-#popup{
+
+#popup {
     display: none;
     position: absolute;
     box-sizing: border-box;
@@ -160,16 +242,20 @@ body{
     height: 70vh;
     width: 50vw;
 }
-#confirmaForm{
+
+#confirmaForm {
     height: 80%;
 }
-#campos > label{
+
+#campos>label {
     font-size: xx-large;
 }
-#campos{
+
+#campos {
     height: 80%;
 }
-#fechar{
+
+#fechar {
     position: absolute;
     top: 3%;
     right: 5%;
@@ -178,13 +264,15 @@ body{
     border-style: none;
     border-radius: 40%;
 }
-#tel{
+
+#tel {
     color: white;
     background-color: #69142f;
     font-size: 3vw;
     width: 100%;
 }
-#confirmacao{
+
+#confirmacao {
     font-size: xxx-large;
     color: white;
 }
